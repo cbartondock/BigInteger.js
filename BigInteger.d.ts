@@ -2,6 +2,12 @@
  * Type definitions for BigInteger.js
  * Definitions by: Tommy Frazier <https://github.com/toefraz>
  */
+
+declare global {
+  type bigint = any;
+}
+
+
 export = bigInt;
 export as namespace bigInt;
 

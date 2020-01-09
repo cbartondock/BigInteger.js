@@ -3,18 +3,16 @@
  * Definitions by: Tommy Frazier <https://github.com/toefraz>
  */
 
-declare global {
-  type bigInteger = any;
-}
-
-
 export = bigInt;
 export as namespace bigInt;
 
 declare var bigInt: bigInt.BigIntegerStatic;
+declare global {
+  type bigInt = any;
+}
 
 declare namespace bigInt {
-    type BigNumber = number | bigint | string | BigInteger;
+    type BigNumber = number | string | BigInteger | bigInt;
 
     interface BigIntegerStatic {
         /**
@@ -30,7 +28,7 @@ declare namespace bigInt {
         /**
          * Parse a Javascript native bigint into a bigInt.
          */
-        (number: bigint): BigInteger;
+        (number: bigInt): BigInteger;
 
         /**
          * Parse a string into a bigInt.

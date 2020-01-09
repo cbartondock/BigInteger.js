@@ -4,7 +4,7 @@
  */
 
 declare global {
-  type bigint = any;
+  type bigInteger = any;
 }
 
 
